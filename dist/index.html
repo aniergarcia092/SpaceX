@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Pixi Project</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #120a0b; overflow: hidden; font-family: system-ui, sans-serif; color: #eee; }
+    #app { position: fixed; inset: 0; }
+    #menu-inicio { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 16px; background: #120a0b; }
+    #menu-inicio button { font-size: 20px; padding: 14px 32px; border: 0; border-radius: 10px;
+      background: #ff9a2e; color: #120a0b; cursor: pointer; }
+    .oculto { display: none !important; }
+    #btn-rover, #btn-atacar, #btn-reiniciar { position: fixed; z-index: 20; display: none; font-size: 18px;
+      padding: 12px 16px; border: 0; border-radius: 12px; background: rgba(255,154,46,.9); color: #120a0b; }
+    body.movil #btn-rover, body.movil #btn-atacar, body.movil #btn-reiniciar { display: block; }
+    #btn-rover { left: 12px; bottom: 120px; }
+    #btn-atacar { right: 12px; bottom: 120px; }
+    #btn-reiniciar { left: 50%; top: 40%; transform: translateX(-50%); }
+  </style>
+  <script type="module" crossorigin src="/assets/index-Mmb5ULZW.js"></script>
+</head>
+<body>
+  <div id="menu-inicio">
+    <h1>Elige tu modo</h1>
+    <button data-modo="pc">🖥️ PC</button>
+    <button data-modo="movil">📱 Móvil</button>
+  </div>
+
+  <div id="app"></div>
+  <button id="btn-rover" class="oculto">🎯</button>
+  <button id="btn-atacar" class="oculto">⚔️</button>
+  <button id="btn-reiniciar" class="oculto">🔄</button>
+
+</body>
+</html>
